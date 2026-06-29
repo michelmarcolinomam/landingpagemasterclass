@@ -206,6 +206,21 @@
       font-size:.58rem; letter-spacing:.35em; text-transform:uppercase;
       color:var(--cyan); margin-bottom:2.5rem;
     }
+    .problem .section-tag { color:#0188a6; }
+    .problem .section-tag::before { background:#0188a6; }
+    .problem .problem-heading { color:#025273; font-weight:300; }
+    .problem .problem-heading strong { color:#025273; font-weight:700; }
+    .problem .problem-heading em { color:#0188a6; }
+    .problem .problem-text { color:#5a8a9a; }
+    .pain-cards { border-color:rgba(1,136,166,.15) !important; background:rgba(1,136,166,.06) !important; }
+    .pain-card { background:#e8f4f8 !important; border-bottom:1px solid rgba(1,136,166,.15); }
+    .pain-card:hover { background:#d0eaf4 !important; }
+    .pain-card::before { background:#0188a6; }
+    .pain-num { color:rgba(1,136,166,.4) !important; }
+    .pain-title { color:#025273 !important; font-size:.88rem; font-weight:600; margin-bottom:.3rem; }
+    .pain-desc { color:#5a8a9a !important; }
+    .testimonials .section-tag { color:var(--blue-mid); }
+    .testimonials .section-tag::before { background:var(--blue-mid); }
     .section-tag::before { content:''; width:20px; height:1px; background:var(--cyan); }
     .reveal { opacity:1; transform:translateY(0); transition:opacity .85s ease,transform .85s ease; }
     .reveal.visible { opacity:1; transform:translateY(0); }
@@ -214,20 +229,20 @@
     .reveal-d3 { transition-delay:.3s; }
 
     /* ── PROBLEM ── */
-    .problem { background:var(--navy); }
+    .problem { background:#ffffff; color:var(--navy); }
     .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
     .problem-heading {
       font-family:'Raleway',sans-serif; font-weight:200;
       font-size:clamp(2.2rem,4vw,4rem); line-height:1.05;
-      margin-bottom:1.5rem;
+      margin-bottom:1.5rem; color:var(--navy);
     }
     .problem-heading strong { font-weight:900; display:block; }
     .problem-heading em { font-style:italic; color:var(--cyan); }
-    .problem-text { font-size:.9rem; line-height:1.9; color:rgba(255,255,255,.6); margin-bottom:1.2rem; }
+    .problem-text { font-size:.9rem; line-height:1.9; color:var(--muted); margin-bottom:1.2rem; }
 
-    .pain-cards { display:flex; flex-direction:column; gap:1px; background:var(--line-dark); border:1px solid var(--line-dark); }
+    .pain-cards { display:flex; flex-direction:column; gap:1px; background:rgba(0,18,38,.08); border:1px solid rgba(0,18,38,.08); }
     .pain-card {
-      background:var(--petrol); padding:1.8rem 2rem;
+      background:var(--navy); padding:1.8rem 2rem;
       display:flex; gap:1.2rem; align-items:flex-start;
       transition:background .3s; position:relative; overflow:hidden;
     }
@@ -352,27 +367,28 @@
     .istat-label { font-size:.55rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-top:.2rem; }
 
     /* ── TESTIMONIALS ── */
-    .testimonials { background:var(--navy); }
+    .testimonials { background:#f0f4f6; }
     .testi-heading {
       font-family:'Raleway',sans-serif; font-weight:200;
       font-size:clamp(2rem,3.5vw,3rem); line-height:1.1; margin-bottom:3.5rem;
+      color:var(--navy);
     }
-    .testi-heading strong { font-weight:900; }
+    .testi-heading strong { font-weight:900; color:var(--navy); }
     .testi-heading em { color:var(--cyan); font-style:italic; }
     .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
     .testi-card {
-      background:var(--petrol); padding:2.5rem;
-      border:1px solid var(--line-dark); position:relative; overflow:hidden;
-      transition:border-color .3s;
+      background:#ffffff; padding:2.5rem;
+      border:1px solid rgba(0,18,38,.08); position:relative; overflow:hidden;
+      transition:border-color .3s, box-shadow .3s;
     }
-    .testi-card:hover { border-color:var(--cyan-ln); }
-    .testi-card::before { content:'"''; font-family:'Raleway',sans-serif; font-size:5rem; font-weight:900; color:rgba(1,136,166,.1); position:absolute; top:.5rem; right:1.5rem; line-height:1; }
+    .testi-card:hover { border-color:var(--cyan-ln); box-shadow:0 4px 20px rgba(1,136,166,.08); }
+    .testi-card::before { content:'"''; font-family:'Raleway',sans-serif; font-size:5rem; font-weight:900; color:rgba(1,136,166,.08); position:absolute; top:.5rem; right:1.5rem; line-height:1; }
     .testi-stars { display:flex; gap:.2rem; margin-bottom:1.2rem; }
     .star { color:var(--cyan); font-size:.8rem; }
-    .testi-text { font-size:.82rem; font-style:italic; color:rgba(255,255,255,.65); line-height:1.85; margin-bottom:1.8rem; font-weight:300; padding-top:1.2rem; }
+    .testi-text { font-size:.82rem; font-style:italic; color:var(--muted); line-height:1.85; margin-bottom:1.8rem; font-weight:300; padding-top:1.2rem; }
     .testi-author { display:flex; align-items:center; gap:.8rem; }
     .testi-avatar { width:36px; height:36px; border-radius:50%; background:var(--blue-mid); display:flex; align-items:center; justify-content:center; font-size:.62rem; font-weight:700; color:var(--cyan); border:1px solid var(--cyan-ln); flex-shrink:0; }
-    .testi-name { font-size:.78rem; font-weight:600; }
+    .testi-name { font-size:.78rem; font-weight:600; color:var(--navy); }
     .testi-role { font-size:.6rem; color:rgba(255,255,255,.4); margin-top:.1rem; }
     .testi-tag { display:inline-block; margin-top:.8rem; padding:.2rem .7rem; background:var(--cyan-lt); border:1px solid var(--cyan-ln); font-size:.48rem; letter-spacing:.2em; text-transform:uppercase; color:var(--cyan); }
 
@@ -548,7 +564,7 @@
 <!-- NAV -->
 <nav>
   <span class="nav-logo">Michel <span>Marcolino</span></span>
-  <a href="#inscrever" class="nav-cta">Garantir minha vaga</a>
+  <a href="https://pay.hotmart.com/A106531377G" class="nav-cta">Garantir minha vaga</a>
 </nav>
 
 <!-- ── HERO ── -->
@@ -556,9 +572,9 @@
   <div class="hero-left">
     <div class="hero-badge">Master Class · Ao Vivo</div>
     <div class="hero-event-info">
-      <span class="event-pill">📅 <span>14 de Junho de 2026</span></span>
-      <span class="event-pill">🕖 <span>19h00 (horário de Brasília)</span></span>
-      <span class="event-pill">⏱ <span>~2 horas</span></span>
+      <span class="event-pill">📅 <span>25 de Julho de 2026</span></span>
+      <span class="event-pill">🕖 <span>15h00 (horário de Brasília)</span></span>
+      <span class="event-pill">⏱ <span>~4 horas</span></span>
     </div>
     <h1 class="hero-title">
       Suas emoções<br>
@@ -574,7 +590,7 @@
       <div class="price-note">Acesso ao vivo + gravação disponível por 4 dias</div>
     </div>
     <div class="hero-cta">
-      <a href="#inscrever" class="btn-primary">Garantir minha vaga <span class="btn-arrow">→</span></a>
+      <a href="https://pay.hotmart.com/A106531377G" class="btn-primary">Garantir minha vaga <span class="btn-arrow">→</span></a>
       <span class="guarantee-micro">✦ Acesso imediato após confirmação</span>
     </div>
   </div>
@@ -598,7 +614,7 @@
     <div class="cd-unit"><span class="cd-num" id="cd-mins">27</span><div class="cd-label">Min</div></div>
     <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><div class="cd-label">Seg</div></div>
   </div>
-  <a href="#inscrever" class="countdown-cta">Quero participar →</a>
+  <a href="https://pay.hotmart.com/A106531377G" class="countdown-cta">Quero participar →</a>
 </div>
 
 <!-- ── PROBLEMA ── -->
@@ -804,7 +820,7 @@
     <p style="font-size:.68rem;color:rgba(255,255,255,.35);margin-top:.5rem;font-family:'Montserrat',sans-serif;">Ao vivo + gravação disponível por 4 dias</p>
   </div>
 
-  <p style="position:relative;display:block;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:2.5rem;font-family:'Montserrat',sans-serif;">⏱ Acesso encerrado em 14 de Junho às 19h00</p>
+  <p style="position:relative;display:block;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:2.5rem;font-family:'Montserrat',sans-serif;">⏱ Acesso encerrado em 25 de Julho às 15h00</p>
 
   <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:1rem;max-width:460px;margin:0 auto 2rem;">
     <a href="https://pay.hotmart.com/A106531377G" style="display:inline-flex;align-items:center;gap:.8rem;padding:1.2rem 3rem;background:#0188a6;color:#ffffff;font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;box-shadow:0 12px 40px rgba(1,136,166,.5);transition:background .3s;">Garantir minha vaga agora →</a>
@@ -851,7 +867,7 @@
   }
 
   // Countdown to June 14, 2026 19:00
-  const target = new Date('2026-06-14T19:00:00-03:00');
+  const target = new Date('2026-07-25T15:00:00-03:00');
   function updateCountdown(){
     const now = new Date();
     const diff = target - now;
